@@ -1,0 +1,292 @@
+/* 🌈 SOFT PROFESSIONAL BACKGROUND */
+.dashboardWrapper {
+  min-height: 100vh;
+  padding-top: 6rem;
+  padding-bottom: 3rem;
+  font-family: sans-serif;
+
+  background: linear-gradient(135deg, #e0f2fe, #f0f9ff, #eef2ff);
+  background-size: 200% 200%;
+  animation: gradientMove 12s ease infinite;
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* CONTAINER */
+.dashboardContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* HEADER */
+.dashboardHeader {
+  margin-bottom: 2rem;
+}
+
+.dashboardHeader h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #0f172a;
+}
+
+.dashboardHeader p {
+  color: #475569;
+}
+
+/* GRID */
+.dashboardGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+  .dashboardGrid {
+    grid-template-columns: 1fr 2fr;
+  }
+}
+
+/* LEFT */
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ✨ GLASS CARD */
+.card {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(14px);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+
+  box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+  transition: all 0.25s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(37, 99, 235, 0.12);
+}
+
+/* =========================
+   🎯 PROFILE CIRCLE (FIXED)
+========================= */
+
+.progressWrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+/* NEW MODERN CIRCLE */
+.progressCircle.modern {
+  position: relative;
+  width: 150px;
+  height: 150px;
+}
+
+/* CENTER TEXT */
+.progressCenter {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  pointer-events: none;
+}
+
+/* % TEXT */
+.percent {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #1e293b;
+  line-height: 1;
+}
+
+/* LEVEL TEXT */
+.level {
+  font-size: 0.75rem;
+  color: #64748b;
+  margin-top: 3px;
+}
+
+/* ROLE TEXT */
+.roleText {
+  margin-top: 12px;
+  text-align: center;
+  font-size: 0.9rem;
+  color: #475569;
+}
+
+/* =========================
+   HEADINGS
+========================= */
+
+.skillBreakdown h2,
+.profileStrength h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #0f172a;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   SKILLS
+========================= */
+
+.skillGroup {
+  margin-bottom: 1rem;
+}
+
+.skillHeader {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.greenIcon { color: #22c55e; }
+.orangeIcon { color: #f97316; }
+
+.skillList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+/* TAGS */
+.skillTag {
+  padding: 0.3rem 0.8rem;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  border: 1px solid;
+  transition: all 0.2s;
+}
+
+.skillTag:hover {
+  transform: scale(1.05);
+}
+
+/* MATCHED */
+.greenTag {
+  background: #dcfce7;
+  color: #166534;
+  border-color: #bbf7d0;
+}
+
+/* MISSING */
+.orangeTag {
+  background: #ffedd5;
+  color: #c2410c;
+  border-color: #fed7aa;
+}
+
+.divider {
+  height: 1px;
+  background-color: #e2e8f0;
+  margin: 1rem 0;
+}
+
+/* =========================
+   RIGHT SIDE
+========================= */
+
+.rightColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* JOB CARD */
+.jobCard {
+  transition: all 0.25s ease;
+}
+
+.jobCard:hover {
+  transform: translateY(-5px);
+}
+
+/* FLEX */
+.jobFlex {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.jobInfoFlex {
+  display: flex;
+  gap: 1rem;
+  flex: 1;
+}
+
+/* ICON */
+.jobIcon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 3rem;
+  height: 3rem;
+  border-radius: 0.6rem;
+  background: linear-gradient(135deg, #dbeafe, #bfdbfe);
+  color: #1d4ed8;
+}
+
+/* DETAILS */
+.jobDetails {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 0.85rem;
+  color: #64748b;
+}
+
+/* MATCH TAG */
+.matchTag {
+  margin-top: 0.4rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  font-size: 0.7rem;
+  font-weight: bold;
+  padding: 0.2rem 0.6rem;
+  border-radius: 999px;
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+
+/* BUTTON */
+.applyBtn {
+  padding: 0.6rem 1.4rem;
+  border-radius: 0.6rem;
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.applyBtn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+}
+
+.applyBtn:disabled {
+  background: #94a3b8;
+  cursor: not-allowed;
+  box-shadow: none;
+}

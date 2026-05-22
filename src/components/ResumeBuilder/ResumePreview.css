@@ -1,0 +1,102 @@
+/* CONTAINER */
+.preview-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* A4 PAPER */
+.resume-paper {
+  width: 360px;
+  aspect-ratio: 210 / 297;
+  background: white;
+  display: flex;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
+}
+
+/* LEFT SIDE */
+.resume-left {
+  width: 35%;
+  background: #0f172a;
+  color: #cbd5e1;
+  padding: 16px;
+}
+
+.name-section h1 {
+  font-size: 14px;
+  color: white;
+  line-height: 1.2;
+  margin-bottom: 5px;
+}
+
+.name-section p {
+  font-size: 10px;
+  color: #60a5fa;
+}
+
+/* RIGHT SIDE */
+.resume-right {
+  width: 65%;
+  padding: 18px;
+  color: #1e293b;
+}
+
+/* SECTION */
+.section {
+  margin-bottom: 16px;
+}
+
+.section h2 {
+  font-size: 10px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border-bottom: 1px solid #475569;
+  margin-bottom: 6px;
+  padding-bottom: 2px;
+}
+
+.section h2.blue {
+  border-bottom: 2px solid #2563eb;
+}
+
+.section h3 {
+  font-size: 11px;
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+
+.section p {
+  font-size: 10px;
+  color: #475569;
+  line-height: 1.4;
+}
+
+/* ROW */
+.row {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: #2563eb;
+  margin-bottom: 4px;
+}
+
+/* ICON TEXT */
+.icon-text {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+/* SKILLS */
+ul {
+  padding-left: 14px;
+}
+
+li {
+  font-size: 10px;
+  margin-bottom: 3px;
+}

@@ -1,0 +1,515 @@
+/* MAIN */
+.form-container {
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 26px;
+  margin-bottom: 20px;
+  color: #0f172a;
+}
+
+/* CARD */
+.form-card {
+  background: white;
+  padding: 25px;
+  border-radius: 10px;
+  border: 1px solid #e2e8f0;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+/* INPUT */
+.form-group {
+  margin-bottom: 18px;
+}
+
+label {
+  font-size: 13px;
+  color: #475569;
+  margin-bottom: 5px;
+  display: block;
+}
+
+.input-wrapper {
+  position: relative;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #cbd5e1;
+  outline: none;
+  transition: 0.2s;
+  font-size: 14px;
+}
+
+input:focus, textarea:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37,99,235,0.2);
+}
+
+/* ICONS */
+.check-icon {
+  position: absolute;
+  right: 35px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: green;
+  width: 16px;
+}
+
+/* ADD BUTTON */
+.add-btn {
+  position: absolute;
+  right: 5px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #2563eb;
+  color: white;
+  border: none;
+  padding: 6px;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.add-btn:hover {
+  background: #1d4ed8;
+}
+
+/* GRID */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+}
+
+.grid-3 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 15px;
+}
+
+/* SKILLS */
+.skills-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.skill-chip {
+  background: #e2e8f0;
+  padding: 6px 12px;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+}
+
+.skill-chip button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+/* SUGGESTIONS */
+.suggestions {
+  background: white;
+  border: 1px solid #e2e8f0;
+  margin-top: 6px;
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+}
+
+.suggestions div {
+  padding: 8px 10px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.suggestions div:hover {
+  background: #f1f5f9;
+}
+
+/* NAV BUTTONS */
+.form-nav {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+button {
+  padding: 8px 16px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* PRIMARY */
+.primary-btn {
+  background: #2563eb;
+  color: white;
+}
+
+.primary-btn:hover {
+  background: #1d4ed8;
+}
+
+/* 🔥 FINAL STEP */
+.final-step {
+  text-align: center;
+}
+
+/* ✅ NEW: BUTTON GROUP (Download + Analyze) */
+.final-actions {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* space between buttons */
+  margin-top: 20px;
+}
+
+/* ✅ NEW: ANALYZE BUTTON */
+.match-btn {
+  background: #10b981; /* green */
+  color: white;
+}
+
+.match-btn:hover {
+  background: #059669;
+}
+
+
+/* ══════════════════════════════════════════════════════════
+   ADD THESE STYLES TO YOUR EXISTING ResumeForm.css
+   (paste at the bottom of the file)
+══════════════════════════════════════════════════════════ */
+
+/* ── Field label row (label + AI button side by side) ── */
+.field-label-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 6px;
+}
+
+.field-label-row label {
+  margin-bottom: 0 !important;
+}
+
+/* ── AI Strengthen button ── */
+.ai-strengthen-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: inherit;
+  color: #7c3aed;
+  background: linear-gradient(135deg, #ede9fe 0%, #f3e8ff 100%);
+  border: 1px solid #c4b5fd;
+  border-radius: 9999px;
+  padding: 5px 14px;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.ai-strengthen-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #ddd6fe 0%, #ede9fe 100%);
+  border-color: #a78bfa;
+  transform: translateY(-1px);
+  box-shadow: 0 3px 10px rgba(124, 58, 237, 0.2);
+}
+
+.ai-strengthen-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.ai-suggest-btn {
+  color: #1d4ed8;
+  background: linear-gradient(135deg, #eff6ff 0%, #e0f2fe 100%);
+  border-color: #93c5fd;
+}
+
+.ai-suggest-btn:hover:not(:disabled) {
+  background: linear-gradient(135deg, #dbeafe 0%, #e0f2fe 100%);
+  border-color: #60a5fa;
+  box-shadow: 0 3px 10px rgba(37, 99, 235, 0.2);
+}
+
+/* ── Spinning loader icon ── */
+.spin {
+  animation: spin 0.8s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* ── Textarea check icon fix ── */
+.textarea-check {
+  top: 12px !important;
+  bottom: auto !important;
+}
+
+/* ── AI skills bar ── */
+.ai-skills-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.ai-skills-hint {
+  font-size: 12.5px;
+  color: #64748b;
+  flex: 1;
+}
+
+/* ── Skill input wrapper ── */
+.skill-input-wrapper {
+  position: relative;
+}
+
+/* ── Suggestions dropdown ── */
+.suggestions-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  background: white;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+  z-index: 100;
+  overflow: hidden;
+  max-height: 240px;
+  overflow-y: auto;
+}
+
+.suggestion-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 9px 14px;
+  font-size: 13px;
+  color: #334155;
+  cursor: pointer;
+  transition: background 0.1s;
+}
+
+.suggestion-item:hover {
+  background: #eff6ff;
+  color: #1d4ed8;
+}
+
+.suggestion-item svg {
+  color: #94a3b8;
+  flex-shrink: 0;
+}
+
+/* ── Skills empty hint ── */
+.skills-empty-hint {
+  font-size: 13px;
+  color: #94a3b8;
+  text-align: center;
+  padding: 1.5rem 0;
+  font-style: italic;
+}
+
+/* ── Summary tips ── */
+.summary-tips {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-left: 3px solid #7c3aed;
+  border-radius: 8px;
+  padding: 12px 16px;
+  margin-top: 8px;
+}
+
+.tips-label {
+  font-size: 12.5px;
+  font-weight: 600;
+  color: #7c3aed;
+  margin: 0 0 6px;
+}
+
+.summary-tips ul {
+  margin: 0;
+  padding-left: 18px;
+}
+
+.summary-tips li {
+  font-size: 12.5px;
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* ── AI Toast notification ── */
+.ai-toast {
+  position: fixed;
+  top: 80px;
+  right: 24px;
+  background: #0f172a;
+  color: white;
+  font-size: 13.5px;
+  font-weight: 500;
+  padding: 12px 20px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  z-index: 9999;
+  animation: toastIn 0.25s ease;
+}
+
+@keyframes toastIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Final step ── */
+.final-header {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.final-icon {
+  color: #2563eb;
+  margin-bottom: 8px;
+}
+
+.final-header h2 {
+  font-size: 22px;
+  font-weight: 800;
+  color: #0f172a;
+  margin: 0 0 6px;
+}
+
+.final-header p {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+}
+
+/* ── Checklist ── */
+.final-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 1.5rem;
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  padding: 1rem 1.25rem;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13.5px;
+  font-weight: 500;
+}
+
+.checklist-item.done {
+  color: #059669;
+}
+
+.checklist-item.done svg {
+  color: #059669;
+  flex-shrink: 0;
+}
+
+.checklist-item.pending {
+  color: #94a3b8;
+}
+
+.checklist-dot {
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  border: 2px solid #cbd5e1;
+  flex-shrink: 0;
+  display: inline-block;
+}
+
+/* ── Final action buttons ── */
+.final-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+}
+
+.final-download-btn,
+.final-analyze-btn {
+  flex: 1;
+  min-width: 140px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 13px 20px;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 9999px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.final-download-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  box-shadow: 0 4px 14px rgba(37, 99, 235, 0.3);
+}
+
+.final-download-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37, 99, 235, 0.45);
+}
+
+.final-analyze-btn {
+  background: linear-gradient(135deg, #059669, #047857);
+  color: white;
+  box-shadow: 0 4px 14px rgba(5, 150, 105, 0.3);
+}
+
+.final-analyze-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(5, 150, 105, 0.45);
+}
+
+.final-analyze-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.final-note {
+  font-size: 12px;
+  color: #94a3b8;
+  text-align: center;
+  margin: 0;
+}

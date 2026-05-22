@@ -1,0 +1,148 @@
+/* src/pages/ResumeOptions.css */
+
+/* ===== MAIN CONTAINER ===== */
+.resume-container {
+  min-height: 100vh;
+  padding: 120px 20px 60px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* 🔥 NEW: Blue transparent gradient */
+  background: linear-gradient(
+    135deg,
+    rgba(37, 99, 235, 0.08),
+    rgba(59, 130, 246, 0.12),
+    rgba(14, 165, 233, 0.08)
+  );
+
+  backdrop-filter: blur(12px);
+}
+
+/* ===== Header ===== */
+.resume-header {
+  text-align: center;
+  max-width: 700px;
+  margin-bottom: 50px;
+}
+
+.resume-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #111;
+}
+
+.resume-title span {
+  color: #0a66ff;
+}
+
+.resume-subtitle {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+}
+
+/* ===== Grid ===== */
+.resume-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  width: 100%;
+  max-width: 900px;
+}
+
+/* ===== Card ===== */
+.resume-card {
+  background: rgba(255, 255, 255, 0.75); /* 🔥 glass effect */
+  backdrop-filter: blur(10px);
+
+  padding: 30px;
+  border-radius: 20px;
+  border: 1px solid rgba(229, 231, 235, 0.6);
+
+  text-align: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.resume-card:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(37, 99, 235, 0.15);
+}
+
+/* ===== Highlight card ===== */
+.resume-card.highlight::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom right,
+    rgba(10, 102, 255, 0.1),
+    transparent
+  );
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.resume-card.highlight:hover::before {
+  opacity: 1;
+}
+
+/* ===== Icon ===== */
+.icon-box {
+  width: 70px;
+  height: 70px;
+  margin: 0 auto 20px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #f3f4f6;
+  color: #555;
+  transition: 0.3s;
+}
+
+.icon-box.blue {
+  background: rgba(10, 102, 255, 0.12);
+  color: #0a66ff;
+}
+
+.resume-card:hover .icon-box {
+  transform: scale(1.1) rotate(2deg);
+}
+
+/* ===== Text ===== */
+.resume-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+  color: #111;
+}
+
+.resume-card p {
+  font-size: 15px;
+  color: #666;
+  margin-bottom: 25px;
+}
+
+/* ===== Action ===== */
+.card-action {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #0a66ff;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.resume-card:hover .card-action {
+  transform: translateX(6px);
+}
+
+/* ===== Link ===== */
+.card-link {
+  text-decoration: none;
+}

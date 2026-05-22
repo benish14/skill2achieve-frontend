@@ -1,0 +1,357 @@
+/* src/components/HeroSection.css */
+
+.hero-section {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: linear-gradient(to bottom right, #F8FBFF, #EAF2FF);
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  padding-top: 8rem;
+  padding-bottom: 4rem;
+}
+
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+/* Abstract soft wave gradients */
+.hero-bg-wave1 {
+  position: absolute;
+  top: -10%;
+  left: -10%;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background-color: rgba(96, 165, 250, 0.2);
+  filter: blur(100px);
+}
+
+.hero-bg-wave2 {
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 40%;
+  height: 40%;
+  border-radius: 50%;
+  background-color: rgba(59, 130, 246, 0.15);
+  filter: blur(120px);
+}
+
+/* Neural network subtle dots */
+.hero-bg-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  background-image: radial-gradient(#2563EB 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+
+/* Sparkles */
+.hero-sparkle {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #60a5fa;
+  box-shadow: 0 0 10px rgba(96, 165, 250, 0.8);
+}
+
+/* Container */
+.hero-container {
+  position: relative;
+  z-index: 10;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+/* Searchbar */
+.searchbar-wrapper {
+  margin-bottom: 3rem;
+}
+
+/* Grid layout */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .hero-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+/* Hero Content */
+.hero-content {
+  max-width: 42rem;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.375rem 0.75rem;
+  border-radius: 9999px;
+  background-color: #eff6ff;
+  border: 1px solid #dbeafe;
+  color: #2563eb;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.hero-badge-dot {
+  position: relative;
+  width: 0.5rem;
+  height: 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-badge-ping {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: #60a5fa;
+  opacity: 0.75;
+  animation: ping 1s cubic-bezier(0,0,0.2,1) infinite;
+}
+
+.hero-badge-inner {
+  position: relative;
+  width: 0.5rem;
+  height: 0.5rem;
+  border-radius: 50%;
+  background-color: #3b82f6;
+}
+
+@keyframes ping {
+  0% { transform: scale(0.5); opacity: 0.75; }
+  75%, 100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Headings */
+.hero-heading {
+  font-size: 3rem;
+  font-weight: 800;
+  line-height: 1.1;
+  color: #0f172a;
+  margin-bottom: 1.5rem;
+}
+
+.hero-subheading {
+  font-size: 1.875rem;
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #94a3b8;
+}
+
+.hero-skill-word {
+  position: relative;
+  display: inline-block;
+}
+
+.hero-underline {
+  position: absolute;
+  bottom: -0.25rem;
+  left: 0;
+  width: 100%;
+}
+
+.hero-right-career {
+  background: linear-gradient(to right, #2563eb, #3b82f6, #06b6d4);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  position: relative;
+  display: inline-block;
+}
+
+.hero-career-blur {
+  position: absolute;
+  bottom: 0.25rem;
+  left: 0;
+  width: 100%;
+  height: 0.75rem;
+  background: linear-gradient(to right, #3b82f6/30, #06b6d4/20);
+  filter: blur(4px);
+  border-radius: 999px;
+  z-index: -10;
+}
+
+.hero-career-line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 0.25rem;
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+  border-radius: 999px;
+  opacity: 0.4;
+}
+
+.hero-star {
+  display: inline-block;
+  margin-left: 0.5rem;
+  color: #60a5fa;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Description */
+.hero-description {
+  font-size: 1.125rem;
+  color: #475569;
+  margin-bottom: 2.5rem;
+  line-height: 1.7;
+  max-width: 42rem;
+}
+
+/* Buttons */
+.hero-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+}
+
+@media(min-width: 640px) {
+  .hero-buttons {
+    flex-direction: row;
+  }
+}
+
+.btn-primary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: #2563eb;
+  color: white;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 0 20px rgba(37,99,235,0.3);
+  transition: all 0.2s;
+}
+
+.btn-primary:hover {
+  box-shadow: 0 0 25px rgba(37,99,235,0.5);
+}
+
+.btn-secondary {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  background-color: white;
+  color: #475569;
+  font-weight: 600;
+  padding: 1rem 2rem;
+  border-radius: 1rem;
+  border: 2px solid #e2e8f0;
+  transition: all 0.2s;
+}
+
+.btn-secondary:hover {
+  background-color: #f8fafc;
+  border-color: #bfdbfe;
+}
+
+/* Features */
+.hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+}
+
+.feature {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.feature-dot {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.25rem;
+  height: 1.25rem;
+  border-radius: 9999px;
+}
+
+.feature-green {
+  background-color: #dcfce7;
+}
+
+.feature-blue {
+  background-color: #dbeafe;
+}
+
+.feature-gray {
+  background-color: #e2e8f0;
+}
+
+.feature-icon {
+  width: 0.75rem;
+  height: 0.75rem;
+  color: inherit;
+}
+
+/* Right side card */
+.hero-right {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+/* ─── ADD THIS TO THE BOTTOM OF src/components/HeroSection.css ─── */
+
+/* ── Snapshot section (below hero) ───────────────────────── */
+.snapshot-section {
+  background: linear-gradient(180deg, #EAF2FF 0%, #F8FBFF 100%);
+  padding: 3.5rem 0 4rem;
+  border-top: 1px solid rgba(191, 219, 254, 0.4);
+}
+
+.snapshot-section-header {
+  margin-bottom: 0.25rem;
+}
+
+.snapshot-section-title {
+  font-size: clamp(22px, 4vw, 30px);
+  font-weight: 900;
+  color: #0f172a;
+  margin: 0 0 8px;
+  line-height: 1.15;
+}
+
+.snapshot-section-sub {
+  font-size: 15px;
+  color: #64748b;
+  margin: 0;
+  line-height: 1.6;
+  max-width: 540px;
+}

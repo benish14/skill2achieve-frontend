@@ -1,0 +1,153 @@
+/* src/components/Register.css */
+.registerWrapper {
+  min-height: 100vh;
+  padding-top: 5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(135deg, #F8FBFF, #ffffff, #EAF2FF);
+}
+.bgPattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: radial-gradient(#2563EB 1px, transparent 1px);
+  background-size: 32px 32px;
+}
+.blurCircle {
+  position: absolute;
+  border-radius: 9999px;
+  pointer-events: none;
+  filter: blur(120px);
+}
+.blurCircle.topLeft {
+  top: -15%;
+  left: -10%;
+  width: 500px;
+  height: 500px;
+  background: rgba(191, 219, 254, 0.2);
+}
+.blurCircle.bottomRight {
+  bottom: -15%;
+  right: -10%;
+  width: 400px;
+  height: 400px;
+  background: rgba(147, 197, 253, 0.15);
+}
+.registerCardContainer {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  max-width: 28rem;
+  margin: 0 1rem;
+}
+.registerCard {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(24px);
+  border-radius: 2rem;
+  box-shadow: 0 20px 60px -15px rgba(15, 23, 42, 0.05);
+  border: 1px solid #f1f5f9;
+  padding: 2rem 2.5rem;
+}
+.registerHeader {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.logoWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  cursor: pointer;
+  margin-bottom: 1.5rem;
+}
+.logoIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 0.75rem;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+.logoText {
+  font-size: 1.25rem;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  color: #0f172a;
+}
+.logoText .highlight {
+  background: linear-gradient(to right, #2563eb, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.registerForm .formGroup {
+  margin-bottom: 1rem;
+}
+.inputWrapper {
+  position: relative;
+}
+.inputWrapper input {
+  width: 100%;
+  padding: 0.625rem 1rem 0.625rem 2.5rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e2e8f0;
+  outline: none;
+}
+.inputWrapper .inputIcon {
+  position: absolute;
+  left: 0.625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+.passwordToggle {
+  position: absolute;
+  right: 0.625rem;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #94a3b8;
+}
+.terms {
+  display: flex;
+  align-items: start;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+.registerBtn {
+  width: 100%;
+  padding: 0.625rem;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  margin-top: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.registerBtn:hover {
+  background: #1d4ed8;
+}
+.switchLogin {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: 0.75rem;
+}
+.switchLogin button {
+  background: none;
+  border: none;
+  font-weight: 600;
+  color: #2563eb;
+  cursor: pointer;
+}
+.switchLogin button:hover {
+  color: #1d4ed8;
+}

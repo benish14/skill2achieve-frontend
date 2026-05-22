@@ -1,0 +1,120 @@
+.rq-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(8px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 999;
+}
+
+.rq-modal {
+  width: 90%;
+  max-width: 800px;
+  background: white;
+  border-radius: 16px;
+  padding: 40px;
+  text-align: center;
+  position: relative;
+}
+
+.rq-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  border: none;
+  background: none;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.rq-img {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.rq-step h2 {
+  margin-bottom: 10px;
+}
+
+.rq-step p {
+  color: #555;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.rq-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.rq-skip {
+  border: 2px solid #2563eb;
+  padding: 10px 25px;
+  border-radius: 25px;
+  background: transparent;
+  color: #2563eb;
+  cursor: pointer;
+}
+
+.rq-next {
+  background: linear-gradient(135deg, #2563eb, #3b82f6);
+  color: white;
+  padding: 10px 25px;
+  border-radius: 25px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Cards */
+.rq-grid {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.rq-card {
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+  cursor: pointer;
+  min-width: 140px;
+  transition: 0.3s;
+}
+
+.rq-card:hover {
+  border-color: #2563eb;
+  background: #eff6ff;
+}
+
+.rq-card.active {
+  border: 2px solid #2563eb;
+  background: #dbeafe;
+}
+
+/* Progress */
+.rq-progress {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.rq-progress span {
+  width: 8px;
+  height: 8px;
+  background: #cbd5f5;
+  border-radius: 50%;
+}
+
+.rq-progress .active {
+  background: #2563eb;
+}
+
+/* Final Button */
+.final-btn {
+  margin-top: 20px;
+}

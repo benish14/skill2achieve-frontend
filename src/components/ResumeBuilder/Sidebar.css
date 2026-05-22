@@ -1,0 +1,117 @@
+/* MAIN SIDEBAR */
+.sidebar {
+  width: 260px;
+  height: 100vh;
+  background: #0f172a;
+  color: #94a3b8;
+  display: flex;
+  flex-direction: column;
+  position: sticky;
+  top: 0;
+}
+
+/* HEADER */
+.sidebar-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 20px;
+  font-weight: bold;
+  font-size: 18px;
+  color: white;
+  border-bottom: 1px solid #1e293b;
+}
+
+.logo-icon {
+  color: #2563eb;
+}
+
+/* STEPS CONTAINER */
+.sidebar-steps {
+  position: relative;
+  padding: 30px 20px;
+  flex: 1;
+}
+
+/* BACKGROUND LINE */
+.line-bg {
+  position: absolute;
+  left: 34px;
+  top: 40px;
+  bottom: 40px;
+  width: 2px;
+  background: #1e293b;
+}
+
+/* PROGRESS LINE */
+.line-progress {
+  position: absolute;
+  left: 34px;
+  top: 40px;
+  width: 2px;
+  background: #2563eb;
+  transition: height 0.3s ease;
+}
+
+/* STEP */
+.step {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 30px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: inherit;
+  transition: 0.2s;
+}
+
+.step:hover {
+  color: white;
+}
+
+/* CIRCLE */
+.circle {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  border: 2px solid #334155;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  background: transparent;
+  transition: 0.2s;
+}
+
+/* ACTIVE */
+.active-circle {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+  box-shadow: 0 0 10px rgba(37, 99, 235, 0.6);
+}
+
+/* COMPLETED */
+.completed-circle {
+  background: #2563eb;
+  border-color: #2563eb;
+  color: white;
+}
+
+/* LABEL */
+.label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.step.active .label {
+  color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .sidebar {
+    display: none;
+  }
+}

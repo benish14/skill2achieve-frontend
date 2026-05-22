@@ -1,0 +1,195 @@
+/* ===== Header Base ===== */
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 80px; /* ✅ FIX: define height clearly */
+  z-index: 1000; /* ✅ stronger layering */
+
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 6px rgba(59, 130, 246, 0.05);
+}
+
+/* ===== Container ===== */
+.header-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100%; /* ✅ FIX: use full header height */
+}
+
+/* ===== Logo Section ===== */
+.logo-section {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.logo-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 0.5rem;
+  background: linear-gradient(to bottom right, #3b82f6, #1e40af);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+}
+
+.logo-cap {
+  width: 20px;
+  height: 20px;
+  color: white;
+}
+
+.logo-text {
+  font-size: 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.logo-skill {
+  font-weight: 700;
+  color: #1e293b;
+}
+
+.logo-2achieve {
+  font-weight: 900;
+  background: linear-gradient(to right, #3b82f6, #06b6d4);
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+/* ===== Desktop Navigation ===== */
+.desktop-nav {
+  display: none;
+  gap: 2rem;
+  align-items: center;
+}
+
+.desktop-nav button {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #475569;
+  transition: color 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.desktop-nav button:hover {
+  color: #2563eb;
+}
+
+.nav-icon {
+  width: 16px;
+  height: 16px;
+  margin-right: 0.25rem;
+}
+
+.divider {
+  width: 1px;
+  height: 20px;
+  background: #e2e8f0;
+  margin: 0 0.5rem;
+}
+
+/* ===== Register Buttons ===== */
+.btn-register {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.625rem 1.25rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-register:hover {
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn-register:active {
+  transform: scale(0.95);
+}
+
+.btn-register-mobile {
+  background-color: #2563eb;
+  color: white;
+  padding: 0.75rem;
+  border-radius: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.3);
+  width: 100%;
+  transition: all 0.2s;
+  cursor: pointer;
+}
+
+.btn-register-mobile:hover {
+  box-shadow: 0 5px 15px rgba(59, 130, 246, 0.4);
+}
+
+.btn-register-mobile:active {
+  transform: scale(0.95);
+}
+
+/* ===== Mobile Menu ===== */
+.mobile-menu-toggle {
+  display: block;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #475569;
+}
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  padding: 0.5rem 1rem 1rem;
+}
+
+.mobile-nav button {
+  text-align: left;
+  font-size: 1rem;
+  font-weight: 500;
+  color: #475569;
+  background: none;
+  border: none;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.mobile-nav button:hover {
+  color: #2563eb;
+  background: #eff6ff;
+}
+
+.divider-mobile {
+  height: 1px;
+  background: #e2e8f0;
+  margin: 0.25rem 0;
+}
+
+/* ===== Responsive ===== */
+@media (min-width: 768px) {
+  .desktop-nav {
+    display: flex;
+  }
+  .mobile-menu-toggle {
+    display: none;
+  }
+}
